@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>You have succesfully logged-in.</h1>
+
+    <h3> Here is your registration information:</h3>
+    <table>
+      <tr>
+        <th>First Name:</th>
+        <th>Last Name:</th>
+        <th>Email:</th>
+      </tr>
+
+      <tr>
+        <td> {{ firstname }} </td>
+        <td> {{ lastname }} </td>
+        <td> {{ email }}</td>
+      </tr>
+    </table>
+
+
+    {% for friend in all_friends: %}
+        <tr>
+          <td> {{ friend['first_name'] }}</td>
+          <td> {{ friend['last_name'] }} </td>
+          <td> {{ friend['occupation'] }} </td>
+        </tr>
+    {% endfor %}
+
+    <form><button>Log out</button></form>
+
+    <!-- <h2>Delete your email: </h2>
+    <form action="/delete" method="post">
+      <input type="text" name="email"><button type="submit">submit</button>
+    </form> -->
+
+  </body>
+</html>
